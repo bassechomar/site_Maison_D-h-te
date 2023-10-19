@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+html{
+    /* permet de passer d'un éléments à un autre de manière fluide pour tout document html */
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Advent Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/*******************NAVBAR*************************************/
+nav{
+    overflow: hidden; 
+    /* tout ce qui depasse est caché avec averflow:hidden*/
+    background-color: #fffae1;
+    position: fixed;
+    /* [position: fixed] permet de fixer la navbar */
+    width: 100%;
+    /* quelque soit la taille de l'écran la navbar occupera 100% 
+    de la lageur de l'écran avec width= 100% */
+    opacity:0.9;
+}
+header li{
+    /* cible : les [li] qui sont dans le header */
+    float: right;
+    font-size: 1.2 em;
+    /* avec [em]  les polices s'adaptent à la taille de l'écran */   
+}
+header li a{
+    /* les liens se trouvant dans les [li] du header  */
+    text-decoration: none;
+
+    display:block;
+    /* [display: block] pour mettre horizontalment les elements  */
+    text-align: center;
+    /* [text-align: center] pour aligner les texte au centre des elements  */
+    padding: 18px 16px;
+    /* pour le [padding: 18px 16px] nous aurons 18px en Haut et en Bas et 16px à droite et à gauche */
+}
+#logo{
+    font-family: 'Dancing Script' , cursive;
+    /* [font-family: 'Dancing Script'] fait appele à google font || module importé de [google font] */
+    font-weight: bold;
+    float: left;
+    /* [float: left] permet à lélément avec l'id [logo] de floter à gauche de son conteneur */
+}
+/******************IMAGE PRINCIPALE*************************/
+#imagePrincipale{
+    padding: 60px;
+    margin-left: 0;
+    background: url(img/phPrincipale.jpg) no-repeat fixed 0px 60px;
+    /* url de l'image de fond || [no-repeat]= ne pas repeter||[fixed]= fixé|| */
+    background-size: cover;
+    /* [background-size: cover]= L'image couvre toute la largeur ou la hauteur du conteneur et les parties qui dépassent sont rognées si les proportions du conteneur sont différentes (il n'y a aucun espace libre sur lequel on verrait la couleur d'arrière-plan). */
+    height: 799px;
+}
+h1{
+ font-family:' Dancing Script',cursive;
+ text-align: center;
+ color: antiquewhite;
+ font-size: 6em;
+ margin-top: 110px;
+}
+#premierTrait{
+    height: 1px;
+    width: 25%;
+    margin: -3px auto;
+    background-color: #fffae1;
+    box-shadow: 1px 3px 2px black;
+}
+h3{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 3em;
+    text-shadow: 1px 3px 2px black;
+}
+/*********************PRESENTATION****************************/
+#presentation{
+    background: #fffae1;
+    padding: 10px 0px 100px 0px;
+}
+#texteIntro{
+    padding: 0px 20%;
+}
+#prestation{
+    /* les images dans le html */
+    display: flex;
+    /* [display: flex] = pour aligner tous les images */
+    flex-wrap: wrap ;
+    /* [flex-wrap: wrap]= pour enrouler les images  */
+    justify-content: space-between;
+    /* [justify-content: space-between]= repartit les elements sur toutes la largeur  */
+    padding: 30px 10%;
+}
+.imagesPrestations h4{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 15px auto;
+    font-weight: 300;
+}
+.imagesPrestations img{
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px 4px rgba(0, 0, 0, 0.7);
+}
+.imagesPrestations img:hover{
+    /* [.imagesPrestations img:hover]= au survol des image */
+    opacity: 0.5;
+    /*  [opacity: 0.5]= fais disparaitre un peu l'image  */
+    transform: scale(1.05);
+    /* [transform: scale(1.05)]= transforme l'échelle de l'image | fait grossir l'image */
+    transition: 0.8s  ease-in-out;
+    /* [transition: 0.8s]= pour que la transformation s'effectue en douceur */
+    /* [ease-in-out]= pour donner un petit effet mousse = douceur */
+}
+
+/******************************TOURISME****************************************/
+#tourisme{
+    height: 1400px;
+    background-color: #fffae1;
+    padding: 1px 2px;
+}
+#tourisme h2{
+    padding-top: 60px;
+}
+#ocean{
+    background: url(img/oceanAtlantique.jpg);
+}
+#chateau{
+    background: url(img/chateauMedoc.jpg);
+}
+#phare{
+    background: url(img/estuaireDeLaGironde.webp);
+}
+#vignoble{
+    background: url(img/vignobleBordelais.jpg);
+}
+#tourisme li{
+    margin: 65px 100px 0 100px;
+    height: 226px;
+    width: 55%;
+    max-width: 550px;
+    float: left;
+    box-shadow: 6px 6px 28px -1px;
+}
+#tourisme p{
+    height: 45px;
+    width: 235px;
+    background-color: #01df74;
+    float: right;
+    margin: 50px -180px 0 0;
+    /* donnner une marge négative pour que l'élément sort de son cadre  */
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow:4px 4px 0 1px grba(90,161,43,1);
+}
+#tourisme #chateau, #tourisme #vignoble{
+    float:right;
+}
+#chateau p, #vignoble p{
+    float: left;
+    background-color: cyan;
+    margin-left: -180px;
+    box-shadow: -4px 4px 0 1px rgba(15, 15, 154, 156,1);
+}
+/* **********************FOOTER****************************************** */
+footer{
+    background-color: #524a3a;
+    color: #fffae1;
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+form{
+    margin:0 auto;
+    max-width: 900px;
+}
+input,textarea,button{
+    border:none;
+    width: 55%;
+    padding: 15px 10px;
+    margin:1px 0;
+    font-size: 1.2em;
+    font-family: 'Advent Pro', sans-serif;
+    border-radius: 8px;
+}
+textarea{
+    height: 120px;
+    resize: none;
+}
+button{
+    font-size: 1.5em;
+    background-color: #fffae1;
+}
+button:hover{
+    background-color: #e55039;
+    color: #fffae1;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#deuxiemeTrait{
+    height: 1px;
+    width: 75%;
+    background-color: #fffae1;
+    margin: 60px auto;
+}
+#copyrigthEtIcons{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+#copyrigth{
+    width: 50%;
+    text-align: left;
+    color: #fffae1;
+}
+#icons{
+    width: 50%;
+    text-align: right;
+}
+#icons a {
+    display: inline-block;
+    padding:0 15px;
+    font-size: 1.3em;
+    color: #fffae1;
+}
+#icons a:hover{
+    transform: scale(1.5);
+    transition: 0.2s;
+}
+/* *****************MISE 
+EN LIGNE DU SITE INTERNET************* */
+/* ---------PLANETEHOSTER--------un hebergeur gratuit---------***/
